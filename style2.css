@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(226, 174, 40);
+}
+h1{
+    color: white;
+}
+a:hover{
+    color: blue;
+}
+a{
+    color: rgb(255, 255, 255);
+}
