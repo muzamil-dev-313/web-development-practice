@@ -1,1 +1,0 @@
-alert("Hey be careful this website may harmful for you")
