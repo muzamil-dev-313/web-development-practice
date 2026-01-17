@@ -1,0 +1,14 @@
+table, th, td {
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #61c9c9;
+}
+caption{
+    color: #ffffff;
+    background-color: #61c9c9;
+}
+dt{
+    color: blue;
+}
