@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* background-color: yellow; */
+        }
+        /* class selector */
+        .red{
+            color: blue;
+        }
+
+        /* id selector */
+
+        #ali{
+            color: green;
+            background-color: yellow;
+        }
+
+        /* child selector  */
+        div > p{
+            background-color: rgb(61, 11, 11);
+        }
+        div >h1{
+            background-color: aqua;
+        }
+
+        /* descentand selector  */
+        div p{
+            background-color: rgb(235, 221, 225);
+            
+        }
+        /* universal selector  */
+        *{
+            margin: 0;
+            padding: 10px;
+        }
+        /* pseudo Selector  */
+        
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: black;
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            color: blue;
+        }
+        
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="selector">
+        <p>I'm a selector para</p>
+        <p>I'm the second selector para</p>
+    </main>
+    <div>
+        <h1>HTML & CSS</h1>
+        <p>This is another day to code the HTML and CSS</p>
+    </div>
+    <div>
+        <article>
+            <p>I am a para inside an article</p>
+            <p>I am a para inside an article</p>
+        </article>
+    </div>
+
+    <div class="red">
+        I'm a div block
+    </div>
+    <div id="ali">
+        awdawwdawdwa
+    </div>
+    <a href="https://www.google.com"> go to Google</a>
+    <a href="https://www.facebook.com">go to Facebook</a>
+    
+</body>
+</html>
