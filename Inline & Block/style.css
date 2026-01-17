@@ -1,0 +1,10 @@
+p{
+    background-color: aquamarine;
+}
+span{
+    background-color: rgb(98, 228, 130);
+}
+div,a{
+    background-color: rgb(20, 38, 139);
+    color: white;
+}
