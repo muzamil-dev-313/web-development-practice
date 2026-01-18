@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: rgb(126, 201, 145);
+        }
+        /* The specificity of this selector is 10  */
+        .red {
+            color: burlywood;
+        }
+        /* The specificity of this selector is 10  */
+        .brown {
+            color: red;
+        }
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: #000 ;
+        }
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [aria-atomic=a] {
+            color: rgb(95, 93, 212);
+            background-color: chartreuse;
+        }
+
+        /* The !important rule is used to give the value of a specific property the highest priority. The !important rule will override ALL previous styling rules for that specific property on that element! The !important keyword is added to the end of a CSS declaration, before the semicolon. Like this
+         */
+        h2 {
+            color: blue !important;
+        }
+
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        h1.red.brown.yellow[aria-atomic=a]{
+            color: rgb(141, 89, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="red brown yellow" aria-atomic="a">CSS Specificity</h1>
+    <p>CSS specificity is an algorithm that determines which style declaration is ultimately applied to an element.</p>
+
+    <h2 style="color: aqua;">Specificity Calculation</h2>
+    <p>To calculate specificity. Assign a value to each part of the selector:</p>
+    <ul>
+        <li>Universal Selector: 0</li>
+        <li>Element selectors and pseudo-elements: 1</li>
+        <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+        <li>ID selectors: 100</li>
+        <li>Inline styles: 1000</li>
+    </ul>
+    <p>Then, add up the values of all the parts in the selector.</p>
+</body>
+
+</html>
