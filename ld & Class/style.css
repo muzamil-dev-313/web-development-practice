@@ -1,11 +1,13 @@
 .red{
     background-color: rgb(217, 255, 157);
 }
-.bg-yellow{
+.yellow{
     color: red;
 }
+.white{
+    color: maroon;
+}
 
-
-#firstdiv{
-    color: rgb(126, 131, 179);
+#seconddiv{
+    color: rgb(39, 57, 218);
 }
