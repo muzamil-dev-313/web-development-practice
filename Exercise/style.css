@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(143, 137, 137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    min-height: 500px;
+    width: 350px;
+    border: 2px solid rgb(245, 209, 209);
+    border-radius: 10px;
+    padding: 5px 5px 45px 5px;
+}
+
+img {
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+span {
+    border: 1px solid rgb(190, 188, 188);
+    border-radius: 10px;
+    padding: 3px;
+    margin-left: 35px;
+}
+
+div span:nth-child(2) {
+    margin: 5px;
+
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    background-color: rgb(181, 181, 247);
+}
+
+.button button:hover {
+    background-color: burlywood;
+}
