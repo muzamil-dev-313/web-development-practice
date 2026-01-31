@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and clear in CSS</title>
+    <style>
+        img{
+            float: left;
+            /* float: right; */
+            /* display: flow-root; */
+        }
+        .boxes{
+            /* display: flow-root; */
+            /* overflow: auto; */
+            border: 2px solid blueviolet;
+        }
+        .box{
+            border: 2px solid black;
+        }
+        .box:nth-child(3){
+            /* clear: both; */
+            clear: left;
+            /* clear: right; */
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <img width="230" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4a_yUmf_xQMAvzdKRKgGZt2F8js7UFRdccty8IMDrRA&s" alt="There is a picture of lamborghini">
+        <div class="box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae iste consequuntur, quia tenetur aut odio in quidem fuga laborum pariatur incidunt, aspernatur sit, ipsa dolorem sequi nesciunt. Non eum temporibus autem tempora, minima voluptatum quas.</p>
+        </div>
+        <div class="box"><p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, aut voluptate nisi consequuntur harum fugiat tempore omnis quos, ut a eligendi error facere vitae suscipit tempora iusto quam mollitia ipsam dicta odio distinctio, alias consequatur iste. Velit tempore culpa beatae, aspernatur similique minima. Exercitationem officiis ex voam molestias, quidem facere esse iusto quam! Quibusdam numquam aspernatur atque eaque qui beatae commodi, enim officiis. Iste dolore reiciendis illo dignissimos similique velit recusandae, aliquid, voluptatem numquam iure porro pariatur voluptate quasi enim quas possimus earum architecto? Id atque maxime magnam eveniet inventore natus, ut aliquam molestiae recusandae, placeat dignissimos sint! Nisi, culpa, nemo aut unde quas repellat aliquam illum aperiam itaque possimus, facilis ducimus! Adipisci vitae similique quia, accusamus ducimus alias doloribus, corporis officiis consequatur suscipit, officia non vel neque maiores omnis. Quae, doloribus? Veniam aliquid distinctio quod nihil vero pariatur. Tenetur, et laboriosam rerum libero sint nam tempore alias? Porro explicabo laborum accusamus id.</p></div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis obcaecati illum non voluptate vitae architecto amet facilis voluptatibus rerum, asperiores voluptatum dolorum saepe reiciendis autem dolor! Neque inventore non mollitia! Unde aperiam provident ipsum sequi officia eveniet dignissimos eum facilis ad. Incidunt harum modi libero.</p>
+        </div>
+    </div>
+</body>
+</html>
