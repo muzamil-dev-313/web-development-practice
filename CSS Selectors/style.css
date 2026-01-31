@@ -1,0 +1,49 @@
+/* .child:first-child{
+    background-color: antiquewhite;
+} */
+/* .child:nth-child(2) {
+    color: aquamarine;
+    background-color: black;
+} */
+
+/* .child::first-line{
+    color: blue;
+} */
+
+/* .parent *{
+    background-color: rgb(51, 19, 63);
+    color: rgba(255, 255, 255, 0.979);
+} */
+/* 
+div, a, p, .child, [data-set]{
+    color: blue;
+    padding-bottom: 20px;
+} */
+
+/* .child:nth-child(odd){
+    background-color: cadetblue;
+} */
+
+/* .child:nth-last-child(2){
+    background-color: brown;
+} */
+
+/* .parent::after{
+    content: "Hey, this is pseudo selecter that used alot in websites";
+    border: 2px solid black;
+} */
+ 
+/* .parent::before{
+    content: "Hey, this is pseudo selecter that used alot in websites";
+    border: 2px solid black;
+} */
+
+/* ::selection{
+    color: rgb(122, 33, 211);
+    background-color: bisque;
+} */
+
+/* input::placeholder{
+    color: rgb(255, 246, 246);
+    background-color: rgb(87, 26, 145);
+} */
