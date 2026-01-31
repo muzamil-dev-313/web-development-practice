@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div{
-            /* background-color: yellow; */
-        }
+    <title>CSS Selector</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        /* div{
+            background-color: yellow;
+        } */
         /* class selector */
         .red{
             color: blue;
@@ -15,14 +17,14 @@
 
         /* id selector */
 
-        #selector{
+        #ali{
             color: green;
             background-color: yellow;
         }
 
         /* child selector  */
         div > p{
-            background-color: rgb(61, 11, 11);
+            background-color: rgb(105, 28, 28);
         }
         div >h1{
             background-color: aqua;
@@ -57,10 +59,12 @@
             background-color: aqua;
         }
 
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <main class="selector">
+    <!-- These Content for Internal CSS -->
+    <!-- <main class="selector">
         <p>I'm a selector para</p>
         <p>I'm the second selector para</p>
     </main>
@@ -71,19 +75,28 @@
     <div>
         <article>
             <p>I am a para inside an article</p>
-            <p>I am a para inside another article</p>
+            <p>I am a para inside an article</p>
         </article>
     </div>
 
     <div class="red">
-        I'm a div block and the red is the class name
+        I'm a div block
     </div>
-    <div id="selector">
-        This is the id name of div.
+    <div id="ali">
+        awdawwdawdwa
     </div>
     <a href="https://www.google.com"> go to Google</a>
-    <a href="https://www.facebook.com">go to Facebook</a>
-    
+    <a href="https://www.facebook.com">go to Facebook</a> -->
+
+    <!-- These Content for External CSS -->
+
+    <div class="parent">
+        <div data-set="style" class="child">I am the first child of parent.</div>
+        <div class="child">I am the second child of parent.</div>
+        <div class="child">And I am the Third child of parent.</div>
+        <label for="text" name="username" id="45">Type your name here:</label>
+        <input type="text" name="username" id="45" placeholder="Enter your username">
+    </div>
 </body>
 
 </html>
