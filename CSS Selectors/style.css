@@ -24,6 +24,14 @@ div, a, p, .child, [data-set]{
     background-color: cadetblue;
 } */
 
+/* .container::first-letter{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-style: normal;
+    color: rgb(167, 105, 25);
+    font-weight: 700px;
+} */
+
 /* .child:nth-last-child(2){
     background-color: brown;
 } */
@@ -46,4 +54,5 @@ div, a, p, .child, [data-set]{
 /* input::placeholder{
     color: rgb(255, 246, 246);
     background-color: rgb(87, 26, 145);
+
 } */
