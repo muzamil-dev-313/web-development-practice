@@ -11,20 +11,30 @@
             margin: 0;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+        }
+
         ul {
             display: flex;
-            justify-content: center;
-            padding-right: 150px;
             margin-top: 20px;
+            gap: 30px;
         }
 
         ul li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
             list-style: none;
-            padding: 30px;
+            gap: 30px;
+            padding: 0 5px;
         }
 
-        img {
-            padding-right: 80px;
+        .logo img {
+            padding-right: 300px;
         }
 
         button {
@@ -59,7 +69,10 @@
     <header>
         <nav>
             <ul>
-                <img width="180px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_Site-Logo.png" alt="">
+                <div class="logo">
+                    <img height="80px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_Site-Logo.png"
+                        alt="">
+                </div>
                 <li>Products</li>
                 <li>Pricing</li>
                 <li>Resources</li>
