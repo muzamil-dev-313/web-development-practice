@@ -4,63 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nav bar</title>
+    <title>Document</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            font-family: "Segoe UI";
+            padding: 0 50px;
         }
 
         ul {
             display: flex;
-            margin-top: 20px;
-            gap: 30px;
-        }
-
-        ul li {
-            display: flex;
             align-items: center;
-            cursor: pointer;
             list-style: none;
-            gap: 30px;
-            padding: 0 5px;
+            padding-right: 70px;
+            gap: 50px;
+            cursor: pointer;
         }
 
         .logo img {
-            padding-right: 300px;
+            height: 90px;
         }
 
         button {
             background-color: #ffd741;
-            border: none;
-            height: 30px;
             width: 100px;
-            margin-top: 25px;
+            height: 35px;
             border-radius: 3px;
+            border: none;
             font-weight: 500;
         }
 
         button:hover {
             background-color: #fce077;
             color: rgb(202, 202, 202);
-            font-weight: 500;
-            cursor: pointer;
         }
 
         a {
             text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            color: rgb(11, 12, 12);
+            color: rgb(0, 0, 0);
         }
     </style>
 </head>
@@ -68,16 +50,15 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <div class="logo">
-                    <img height="80px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_Site-Logo.png"
-                        alt="">
-                </div>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_Site-Logo.png" alt="">
+            </div>
+            <ul class="nav">
                 <li>Products</li>
                 <li>Pricing</li>
                 <li>Resources</li>
                 <li>About Us</li>
-                <button> <a href="https://github.com/muzamil-dev-313/web-development-practice">Download</a></button>
+                <li><button><a href="">Download</a></button></li>
             </ul>
         </nav>
     </header>
