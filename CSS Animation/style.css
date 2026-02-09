@@ -1,0 +1,47 @@
+.container{
+    width: 80vw;
+    height: 70vh;
+    background-color: lightblue;
+}
+.item{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(73, 214, 51);
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: move 2s ease-in-out 5 reverse forwards ;
+    /* animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.37, 1.21, 0, 0.96);
+    animation-delay: 3s;
+    animation-iteration-count: infinite; */
+    /* animation-play-state: running;         paused*/ 
+    /* animation-direction: alternate-reverse; */
+    
+}
+@keyframes move{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(200px,0);
+    }
+    50%{
+        transform: translate(200px,200px);
+    }
+    75%{
+        transform: translate(0,200px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+/* @keyframes move{
+    from{
+        background-color: tomato;
+    }
+    to{
+        background-color: blueviolet;
+        transform: translateX(800px) translateY(100px);
+    }
+} */
