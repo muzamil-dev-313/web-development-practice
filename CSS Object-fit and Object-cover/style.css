@@ -1,0 +1,24 @@
+h1 {
+    color: dodgerblue;
+}
+
+.container {
+    width: 800px;
+    height: 700px;
+    border: 2px solid brown;
+    background-image: url("https://ichef.bbci.co.uk/news/1024/cpsprodpb/14235/production/_100058428_mediaitem100058424.jpg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: padding-box;
+}
+
+/* img { 
+    width: 400px;
+    height: 500px; */
+/* object-position: top right; */
+/* object-fit: contain; */
+/* object-fit: cover; */
+/* object-fit: fill; */
+/* object-fit: scale-down; */
+/* object-position: 10px 10px; */
+/* } */
