@@ -1,0 +1,36 @@
+/* The specificity of this selector is 1  */
+h1 {
+    color: rgb(126, 201, 145);
+}
+
+/* The specificity of this selector is 10  */
+.red {
+    color: burlywood;
+}
+
+/* The specificity of this selector is 10  */
+.brown {
+    color: red;
+}
+
+/* The specificity of this selector is 1 + 10 = 11  */
+h1.yellow {
+    color: #000;
+}
+
+/* This is an example of attribute selector. The specificity of this selector is 10 */
+[aria-atomic=a] {
+    color: rgb(95, 93, 212);
+    background-color: chartreuse;
+}
+
+/* The !important rule is used to give the value of a specific property the highest priority. The !important rule will override ALL previous styling rules for that specific property on that element! The !important keyword is added to the end of a CSS declaration, before the semicolon. Like this
+         */
+h2 {
+    color: blue !important;
+}
+
+/* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+h1.red.brown.yellow[aria-atomic=a] {
+    color: rgb(141, 89, 21);
+}
