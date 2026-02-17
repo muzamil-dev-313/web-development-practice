@@ -5,47 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Variables</title>
-    <style>
-        :root {
-            --primarycolor: rgb(59, 88, 121);
-            --secondarycolor: rgb(108, 156, 83);
-            --defpad: 50px;
-            --defop: 0.2;
-            --acent: rgba(236, 81, 81, 0.856);
-        }
-
-        .header {
-            background-color: var(--acent);
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        ul li {
-            list-style: none;
-            padding: var(--defpad);
-        }
-
-        ul li:first-child {
-            opacity: var(--defop)
-        }
-
-        ul li:nth-child(2) {
-            background-color: var(--primarycolor);
-            border: 2px solid var(--secondarycolor);
-        }
-
-        ul li:nth-child(3) {
-            --color: rgb(40, 160, 160);
-            background-color: var(--color);
-        }
-
-        .box {
-            background-color: var(--secondarycolor);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
