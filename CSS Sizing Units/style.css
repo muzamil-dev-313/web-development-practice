@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+}
+
+.box {
+    height: 10vh;
+    width: 80vw;
+    /* width: 1280px; */
+    margin: auto;
+    background-color: aqua;
+    border: 2px solid blueviolet;
+    box-sizing: border-box;
+    font-size: 12px;
+    /* font-size: 2em; */
+}
+
+.box {
+    font-size: 2em;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 80vw;
+    /* height: 100vh; */
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 23px;
+    background-color: bisque;
+    font-size: 14px;
+    min-height: 70vh;
+}
+
+.container div {
+    font-size: 2rem;
+    width: 50%;
+    border: 2px solid;
+}
+
+.container2 {
+    color: yellow;
+    background-color: black;
+    margin: 25px auto;
+    font-size: 22px;
+    /* width: 100vmin; */
+    width: 80vw;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
