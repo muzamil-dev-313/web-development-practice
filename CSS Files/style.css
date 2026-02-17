@@ -1,0 +1,12 @@
+h1 {
+    background-color: black;
+    color: white;
+}
+div,span {
+    color: red;
+    background-color: yellow;
+}
+        
+p {
+    color: rgb(111, 36, 180);
+}
