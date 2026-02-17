@@ -1,0 +1,41 @@
+/* @media not|only mediatype and (expressions) {
+    CSS-Code;
+} */
+body {
+    background-color: black;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        border: 2px solid white;
+        background-color: rgb(56, 103, 124);
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    ody {
+        background-color: rgb(184, 127, 53);
+    }
+
+    .parent {
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+}
+
+div {
+    color: aqua;
+    display: flex;
+}
+
+.parent {
+    display: flex;
+}
+
+.child {
+    width: 350px;
+    height: 350px;
+    background-color: antiquewhite;
+    margin: 5px;
+    border-radius: 50px;
+}
