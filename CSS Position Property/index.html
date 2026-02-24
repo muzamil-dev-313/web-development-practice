@@ -1,56 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Position Property</title>
-    <style>
-        .container{
-            border: 2px solid black;
-            height: 340px;
-            width: 90vw;
-            padding: 5px;
-            margin: 5px;
-        }
-        .container1{
-            background-color: antiquewhite;
-            /* position: sticky; */
-            height: 100px;
-            width: 100%;
-            /* top: 0px;  */
-            position: absolute;
-            /* position: relative; */
-            /* z-index: 1; */
-            /* top: 10px; */
-        }
-        .container2{
-            background-color: rgb(245, 142, 110);
-            /* position: relative;
-            top: -23px;
-            left: 25px; */
-        }
-        .container3{
-            background-color: blue;
-            /* position: fixed;
-            bottom: 60px;
-            left: 7vw; */
-        }
-        .container4{
-            background-color: blueviolet;
-        }
-        .parent{
-            border: 4px solid black;
-            margin: 20px;
-            padding: 40px;
-            /* position: absolute; */
-
-            /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
-            /* transform: translate(0); */
-            /* filter: invert(0); */
-            /* perspective: 0em; */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="parent">
         <div class="container container1"></div>
@@ -59,4 +16,5 @@
         <div class="container container4"></div>
     </div>
 </body>
+
 </html>
