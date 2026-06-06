@@ -70,16 +70,16 @@ console.log(`Avg marks of the class = ${avg}`)
 let itms = [250, 645, 300, 900, 50];
 
 for (let index = 0; index < itms.length; index++) {
-    discount = itms[index] * 10 / 100;
-    final_price = itms[index] - discount
+    let discount = itms[index] * 10 / 100;
+    let final_price = itms[index] - discount
     // console.log(final_price)
     itms[index] = final_price
 }
 console.log(itms)
 // Logic of Apna College 
-let items = [250, 645, 300, 900, 50 ];
+let items = [250, 645, 300, 900, 50];
 let i = 0;
-for(let val of items) {
+for (let val of items) {
     let offer = val / 10;
     items[i] = items[i] - offer;
     console.log(`value after offer = ${items[i]}`);
@@ -119,3 +119,43 @@ for (let i = 0; i < arra.length; i++) {
     }
 }
 console.log(count)
+
+
+// Create a new array that contains the numbers in reverse order without using .reverse().
+// let arrays = [1, 2, 3, 4, 5];
+
+// let number = [1, 2, 3, 4, 5];
+
+
+let m = "5" % 3;
+console.log(m)
+
+let a = 1;
+let b = a++ + ++a + a++; // 1 + 3 + (3) 4 = 7 // 4, 7
+console.log(a, b);  
+
+let count1 = 0;
+
+for (let i = 0; i < 3; i++) { // 0 1 /2  3 is not < 3
+    count1 += i++; // 0 1 2 3 is not < 3 so the output is 2:  
+}
+
+console.log(count1);
+
+
+// Qs. Create an array to store companies -> "Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix" 
+// a. Remove the first company from the array
+// b. Remove Uber & Add Ola in its place
+// c. Add Amazon at the end
+
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+
+let removeFirstcompany = companies.splice(0,1) // companies.shift()
+// console.log(removeFirstcompany)
+console.log(companies)
+
+let addCompany = companies.splice(1, 1, "Ola")
+console.log(companies)
+
+let lastAdd = companies.splice(5,0,"Amazon")  // companies.push("Amazon")
+console.log(companies)
