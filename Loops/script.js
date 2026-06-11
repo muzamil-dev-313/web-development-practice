@@ -170,3 +170,66 @@ for (let i = 1; i < 101; i++) {
         console.log(`${i} is divisible by 3 and 5`);
     };
 };
+
+// Question Practice of break and continue 
+
+// Q1: Stop at First Multiple of 7 
+// Write a loop from 1 to 100 that: 
+//      Prints each number
+//      Use break stop completely when it finds the first number divisible by 7 
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 7 === 0) {
+        // console.log(i)
+        break
+    };
+    console.log(i);
+};
+
+// Q2: Skip Multiples of 3
+// Write a loop from 1 to 20 that: 
+//      Skips numbers divisible by 3
+//      Prints all others
+// Use continue
+// Expected output:
+// 1 2 4 5 7 8 10 11 ...(no 3, 6, 9, etc.)
+
+for (let i = 1; i < 21; i++) {
+    if (i % 3 === 0) {
+        // console.log(i)
+        continue
+    };
+    console.log(i);
+};
+
+
+// Q3: Print First 5 Odd Numbers Only
+// Write a loop from 1 to 100 that:
+//      Prints only 5 odd numbers
+//      Then stops the loop
+
+// Use both if, continue, and a counter + break
+
+// Expected Output 
+// 1 3 5 7 9
+
+for (let i = 1; i <= 100; i++) {
+    if(i % 2 !== 0){
+        console.log(i)
+    }
+    if(i === 9) {
+        break
+        console.log(i)
+    };
+};
+// ------------------------------------
+let counter = 0;
+for (let i = 1; i < 101; i++) {
+    if(i % 2 !== 0){
+        console.log(i)
+        counter++;
+    }
+    if(counter === 5){
+        break
+    }
+}
