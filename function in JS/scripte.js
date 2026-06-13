@@ -8,7 +8,7 @@ function sum(x, y) {
     s = x + y
     return s
 
-}
+};
 console.log(sum(9, 8))
 
 function getVal(val) {
@@ -19,7 +19,7 @@ function getVal(val) {
     else if (val <= 75)
         return 'B'
     else if (val <= 100) return 'A'
-}
+};
 console.log(getVal(75));
 
 // Write a function getGrade(score) that:
@@ -65,30 +65,11 @@ function rps(user, computer) {
 };
 console.log(rps("scissor", "rock"));
 
-
-
-
-/* Create a faulty calculator using JavaScript
-
-This faulty calculator does following:
-1.It takes two numbers as input from the user
-2.It perfoms wrong operations as follows:
-
-+ ---> -
-* ---> +
-- ---> /
-/ ---> **
-
-It performs wrong operation 10% of the times. 
-
-let num = Math.random(); 
-console.log(num);
-
-*/
+// ---------------------------------------------------------------
 
 const mul = (a, b) => {
     return a * b;
-}
+};
 console.log(mul(2, 3));
 
 // Qs. Create a function using the "function" keyword that takes a String as an argument &
@@ -120,3 +101,83 @@ const Vowels = (str) => {
     return count;
 };
 console.log(Vowels("JavaScript is one of the most popular language"));
+
+
+array = [1, 2, 3, 4, 5];
+array.forEach(function printVal(val) { // forEach funtion 
+    console.log(val)
+});
+
+let names = ["Muzamil", "Wajdan Ali", "Ali Reza"]
+names.forEach((name, i) => {
+    console.log(name.toUpperCase(), i) // forEach arrow function 
+});
+
+// Qs. For a given array of numbers, print the square of each value using the forEach loop.
+
+let arr = [11, 22, 33, 44, 55];
+
+arr.forEach(element => {
+    console.log(element ** 2)
+});
+
+
+// Map methods 
+let nums = [78, 90, 33];
+let ar = nums.map((val) => {
+    // console.log(val) 
+    return val;
+});
+console.log(ar);
+
+
+// Filter methods 
+let newArr = arr.filter((value) => {
+    return value % 2 === 0;
+});
+console.log(newArr);
+
+let red = [3, 4, 8, 10, 9];
+
+let rde = red.reduce((last, New) => {
+    // return last + New;
+    if (last > New) {
+        return last;
+    } else {
+        return New;
+    };
+    // return last > New ? last : New
+});
+console.log(rde)
+
+
+// Qs. We are given array of marks of students. Filter out of the marks of students that scored 90+. 
+
+let marks = [50, 60, 87, 93, 75, 80, 90, 95, 100];
+
+const filtered = marks.filter((score) => {
+    if (score >= 90) {
+        return score
+    };
+});
+console.log(filtered);
+
+// Qs. Take a number n as input from user. Create an array of numbers from 1 to n. 
+// Use the reduce method to calculate sum of all numbers in the array.
+// Use the reduce method to calculate product of all numbers in the array. 
+
+let a = prompt("Enter n number: ")
+let b = [];
+
+for (let i = 1; i <= a; i++) {
+    b[i - 1] = i
+};
+console.log(b);
+let total = b.reduce((first, second) => {
+    return first + second;
+});
+console.log(total);
+let product = b.reduce((first, second) => {
+    return first * second;
+});
+console.log(product);
