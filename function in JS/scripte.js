@@ -1,15 +1,165 @@
 function myFunction() {
-    console.log("Hello, Today we are gonna write a Javascript functions")
-    console.log("While writing a code of JS we will learn also.")
+    console.log("Hello, Today we are gonna write a Javascript functions");
+    console.log("While writing a code of JS we will learn also.");
 }
 myFunction();
+//------------------------------------------------------
 
 function sum(x, y) {
-    s = x + y
-    return s
+    s = x + y;
+    return s;
 
 };
-console.log(sum(9, 8))
+console.log(sum(9, 8));
+//------------------------------------------------------
+
+// default values in function 
+function ab(v1 = 4, v2 = 3) {
+    console.log(v1 + v2);
+}
+ab();
+//------------------------------------------------------
+
+// Rest(...) in function. We have spread too(If it adds in the parameter of the space so that is called Rest operator.)
+function abc(...val) { // (a,b,c,d,e,f....) or (...val) or (a,b,c, ...val)
+    console.log(val);
+}
+abc(1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 9, 10)
+//------------------------------------------------------
+
+// Return Values and early return values 
+function abcd() {
+    return 12;
+};
+let a = abcd();
+console.log(a);
+//------------------------------------------------------
+// First class function (Assign to variabes, pass as argument, return from other functions)
+let abcde = function (val) {
+    val();
+}
+abcde(function () {
+    console.log("Hello World!")
+});
+let fnc = function mul(v1, v2) {
+    return v1 + v2
+};
+console.log(fnc(2, 5));
+//------------------------------------------------------
+
+// Higher-order functions
+// A kind of Function that returns a function or accpet another function of parameter.
+function ac(val) { // This one is called higher order function because val accepts the function in the parameters.
+    
+}
+ac(function() { // Not this one.
+    
+});
+function acb() { // This one is not a high order function because it doesn't accept the function in the parameters.
+    // Can we create this as a high order function so the answer is yes, how? see below the codes are written. 
+};
+acb();
+
+function acv() {
+    return function () { // Now this is called high order function. Because a function returns another function in itself. When we call it so we put double bracket to run our outputs.
+        console.log("Hahahhhahaha");
+    };
+}
+acv()();
+//------------------------------------------------------
+
+// Pure and Impure functions.
+// A function that don't change the value of outside of the function is called pure function. 
+let n = 12;
+function aa() { // This function only works inside the blocks and outside of the blocks are not allowed in it.
+    console.log("Hi!");
+}
+aa();
+// Pure Function
+let tax = 10;
+function calculateTotal(price, tax) {
+  return price + (price * tax); 
+}
+console.log(calculateTotal(100, 0.1)); // Always returns 110
+calculateTotal(100, 0.1); // Still returns 110
+
+
+// A function that change the value of outside of the function is called pure function.
+function bb() {
+    n++; // This one is impure function becase n++ will changed the value of n from 12 to 13
+}
+
+let taxRate = 0.1; // External state
+// Impure due to external dependency
+function calculateTotalImpure(price) {
+  return price + (price * taxRate); 
+}
+let print = calculateTotalImpure(100)
+console.log(print);
+//------------------------------------------------------
+
+// Closures and lexical function 
+// A closure is a feature where a nested function remembers and can access variables from its parent scope, even after the parent function has finished executing.
+// In simple words, A function that return another function and return function always use a variable of it's parent function. This is called Closures.
+function name1() {
+    let h = 12;
+    return function () {
+        h++
+        console.log(h)
+    }
+}
+name1()();
+
+
+// Lexical scoping is the rule that determines where a function can look for variables, based entirely on where that function was written in the code
+function grandparent() {
+    let house = "Big House";
+    function parent() {
+    // The parent function can see "house" because it is written inside grandparent
+    console.log(house); 
+  }
+  parent();
+}
+grandparent();
+
+function levelOne() {
+    const food = "Pizza";
+
+    function levelTwo() {
+        const drink = "Soda";
+
+        function levelThree() {
+            console.log(food + " and " + drink);
+        }
+
+        levelThree();
+    }
+
+    levelTwo();
+}
+levelOne();
+
+// BAD ❌
+function bad() {
+    x = 10; // Implicit global - avoid this!
+}
+
+// GOOD ✅
+function good() {
+    let x = 10; // Properly scoped!
+}
+
+function ty() {
+    return function () {
+        for (let i = 0; i < 3; i++) {
+            console.log(i)
+        }
+    }
+}
+ty()();
+//------------------------------------------------------
+
+
 
 function getVal(val) {
     if (val < 50)
@@ -65,7 +215,24 @@ function rps(user, computer) {
 };
 console.log(rps("scissor", "rock"));
 
-// ---------------------------------------------------------------
+
+/* Create a faulty calculator using JavaScript
+
+This faulty calculator does following:
+1.It takes two numbers as input from the user
+2.It perfoms wrong operations as follows:
+
++ ---> -
+* ---> +
+- ---> /
+/ ---> **
+
+It performs wrong operation 10% of the times.
+
+let num = Math.random();
+console.log(num);
+
+*/
 
 const mul = (a, b) => {
     return a * b;
@@ -104,13 +271,13 @@ console.log(Vowels("JavaScript is one of the most popular language"));
 
 
 array = [1, 2, 3, 4, 5];
-array.forEach(function printVal(val) { // forEach funtion 
+array.forEach(function printVal(val) { // forEach funtion
     console.log(val)
 });
 
 let names = ["Muzamil", "Wajdan Ali", "Ali Reza"]
 names.forEach((name, i) => {
-    console.log(name.toUpperCase(), i) // forEach arrow function 
+    console.log(name.toUpperCase(), i) // forEach arrow function
 });
 
 // Qs. For a given array of numbers, print the square of each value using the forEach loop.
@@ -122,16 +289,16 @@ arr.forEach(element => {
 });
 
 
-// Map methods 
+// Map methods
 let nums = [78, 90, 33];
 let ar = nums.map((val) => {
-    // console.log(val) 
+    // console.log(val)
     return val;
 });
 console.log(ar);
 
 
-// Filter methods 
+// Filter methods
 let newArr = arr.filter((value) => {
     return value % 2 === 0;
 });
@@ -151,7 +318,7 @@ let rde = red.reduce((last, New) => {
 console.log(rde)
 
 
-// Qs. We are given array of marks of students. Filter out of the marks of students that scored 90+. 
+// Qs. We are given array of marks of students. Filter out of the marks of students that scored 90+.
 
 let marks = [50, 60, 87, 93, 75, 80, 90, 95, 100];
 
@@ -162,14 +329,14 @@ const filtered = marks.filter((score) => {
 });
 console.log(filtered);
 
-// Qs. Take a number n as input from user. Create an array of numbers from 1 to n. 
+// Qs. Take a number n as input from user. Create an array of numbers from 1 to n.
 // Use the reduce method to calculate sum of all numbers in the array.
-// Use the reduce method to calculate product of all numbers in the array. 
+// Use the reduce method to calculate product of all numbers in the array.
 
-let a = prompt("Enter n number: ")
+let x = prompt("Enter n number: ");
 let b = [];
 
-for (let i = 1; i <= a; i++) {
+for (let i = 1; i <= x; i++) {
     b[i - 1] = i
 };
 console.log(b);
@@ -181,3 +348,4 @@ let product = b.reduce((first, second) => {
     return first * second;
 });
 console.log(product);
+
