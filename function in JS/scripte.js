@@ -50,10 +50,10 @@ console.log(fnc(2, 5));
 // Higher-order functions
 // A kind of Function that returns a function or accpet another function of parameter.
 function ac(val) { // This one is called higher order function because val accepts the function in the parameters.
-    
+
 }
-ac(function() { // Not this one.
-    
+ac(function () { // Not this one.
+
 });
 function acb() { // This one is not a high order function because it doesn't accept the function in the parameters.
     // Can we create this as a high order function so the answer is yes, how? see below the codes are written. 
@@ -78,7 +78,7 @@ aa();
 // Pure Function
 let tax = 10;
 function calculateTotal(price, tax) {
-  return price + (price * tax); 
+    return price + (price * tax);
 }
 console.log(calculateTotal(100, 0.1)); // Always returns 110
 calculateTotal(100, 0.1); // Still returns 110
@@ -92,7 +92,7 @@ function bb() {
 let taxRate = 0.1; // External state
 // Impure due to external dependency
 function calculateTotalImpure(price) {
-  return price + (price * taxRate); 
+    return price + (price * taxRate);
 }
 let print = calculateTotalImpure(100)
 console.log(print);
@@ -106,19 +106,19 @@ function name1() {
     return function () {
         h++
         console.log(h)
-    }
+    }();
 }
-name1()();
+name1();
 
 
 // Lexical scoping is the rule that determines where a function can look for variables, based entirely on where that function was written in the code
 function grandparent() {
     let house = "Big House";
     function parent() {
-    // The parent function can see "house" because it is written inside grandparent
-    console.log(house); 
-  }
-  parent();
+        // The parent function can see "house" because it is written inside grandparent
+        console.log(house);
+    }
+    parent();
 }
 grandparent();
 
@@ -154,11 +154,93 @@ function ty() {
         for (let i = 0; i < 3; i++) {
             console.log(i)
         }
-    }
+    }();
 }
-ty()();
+ty();
+
+//------------------------------------------------------
+// IIFE(Immediately Invoked Function Expression) 
+
+(function () { // function don't give it a name and call it at end.
+    console.log("Hello Muzamil")
+})(); // it already called so no need to call again that's called IIFE.
+
+// Convert this normal function into an I IFE 
+function init() {
+    console.log("Initialized")
+}
+(function init() {
+    console.log("Initialized.")
+})();
+
 //------------------------------------------------------
 
+// Hoisting differences between declaration and expression. 
+Ana(); // This is called Hoisting you can call it before the function declared. We can only Hoist the function statement.
+function Ana() {
+    console.log("Wow!")
+};
+
+
+// console.log(fun); // We can not access the variable function expresssion before declaration. We can't do initialization before declares something. So it means function expression will not Hoist. But function Statement will Hoist that we descussed.
+// let fun = function Not() {
+//     console.log("Wow!")
+// };
+//------------------------------------------------------
+
+// Use rest parameter to accept any number of scores and return the total. 
+
+function getScore(...scores) {
+    let total = 0;
+    scores.forEach(function (element) {
+        total = total + element
+    });
+    return total
+}
+let tt = getScore(10, 20, 30, 40, 50);
+console.log(tt)
+
+//------------------------------------------------------
+// Pass a function into another function and execute it inside.
+function bcd(val) {
+    val();
+}
+bcd(function () {
+    console.log("hey")
+});
+
+// BMI Calculator 
+function bmi(weight, height) {
+    let weights = weight / (height * height);
+    return weights
+}
+let bmis = bmi(73, 2.0)
+console.log(bmis)
+
+let weight = prompt("Enter your weight in kg: ")
+let height = prompt("Enter your height in meters: ")
+function Bmi() {
+    if(weight >= 0){
+        let total = weight / (height * height);
+        return total;
+    }
+    else {
+        return "invalid"
+    }
+}
+let Uu = Bmi();
+console.log(Uu)
+
+
+// Price = Original Price × (1 − Discount % / 100) Reusable discount formula 
+function Calculator() {
+    return function (OriginaPrice, discount) {
+        let Tt = OriginaPrice * (1 - discount / 100)
+        console.log(Tt)
+    }
+        (100, 10);
+}
+Calculator();
 
 
 function getVal(val) {
@@ -214,25 +296,6 @@ function rps(user, computer) {
     return "computer"
 };
 console.log(rps("scissor", "rock"));
-
-
-/* Create a faulty calculator using JavaScript
-
-This faulty calculator does following:
-1.It takes two numbers as input from the user
-2.It perfoms wrong operations as follows:
-
-+ ---> -
-* ---> +
-- ---> /
-/ ---> **
-
-It performs wrong operation 10% of the times.
-
-let num = Math.random();
-console.log(num);
-
-*/
 
 const mul = (a, b) => {
     return a * b;
