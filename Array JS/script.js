@@ -132,7 +132,7 @@ console.log(m)
 
 let a = 1;
 let b = a++ + ++a + a++; // 1 + 3 + (3) 4 = 7 // 4, 7
-console.log(a, b);  
+console.log(a, b);
 
 let count1 = 0;
 
@@ -150,12 +150,44 @@ console.log(count1);
 
 let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
 
-let removeFirstcompany = companies.splice(0,1) // companies.shift()
+let removeFirstcompany = companies.splice(0, 1) // companies.shift()
 // console.log(removeFirstcompany)
 console.log(companies)
 
 let addCompany = companies.splice(1, 1, "Ola")
 console.log(companies)
 
-let lastAdd = companies.splice(5,0,"Amazon")  // companies.push("Amazon")
+let lastAdd = companies.splice(5, 0, "Amazon")  // companies.push("Amazon")
 console.log(companies)
+
+
+let ar = [11, 62, 3, 4, 25, 76, 33];
+let sort = ar.sort(function (x, y) {
+    return y - x;  // Descending Order. 
+    // return x - y;  Ascending Order.
+})
+console.log(sort)
+
+let fd = [1, 2, 3, 4, 5];
+let newfd = fd.find(function (val) {
+    if (val === 4) return val
+})
+console.log(newfd)
+
+let chacha = ["apple", "banana"]
+chacha.pop()
+chacha.push("kiwi")
+
+let jh = [1,2,3,4,5,6,7,8,9,10]
+let newjh = [...jh]
+// console.log(newjh)
+newjh.pop()
+console.log(newjh)
+console.log(jh)
+
+let numb = [1,2,3];
+let nnnn = [...numb]
+console.log(nnnn)
+numb.pop()
+console.log(nnnn)
+console.log(numb)
