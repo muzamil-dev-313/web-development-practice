@@ -1,0 +1,14 @@
+.paragraph {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+/* Now create a new class in CSS and try to append this class to the <p> element.   */
+.New-para {
+    color: rgb(88, 19, 19);
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+}
