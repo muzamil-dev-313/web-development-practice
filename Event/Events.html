@@ -7,8 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="Events.css">
     <style>
-
+        /* body{
+            background-color: aquamarine;
+        } */
     </style>
+
 
 </head>
 
@@ -18,38 +21,38 @@
     <button class="btn">Change Text</button>
     <!-- Task:
     When the button click, the paragraph text should be change into "Hello JavaScript".-->
-    
+
     <!-- 2. Change Background Color  -->
     <button class="change_color">Change Color</button>
     <br> <br>
-    
+
     <!-- 3. Show Input Value   -->
     <input type="text" id="name">
     <button class="btn-2">Show Name</button>
     <p id="result"></p>
-    
+
     <!-- 4. Hide a Paragraph  -->
     <p id="para">I am visible</p>
     <button class="hide">Hide</button>
     <!-- 5. Toggle Paragraph Visibility  -->
     <p id="paRa">Toggle me</p>
     <button class="hides">Toggle</button>
-    
-    
+
+
     <!-- 6. Count Button Clicks -->
     <button class="countBtn">Click Me</button>
     <p class="paraCount">Count: 0</p>
     <!-- every single click, the count should be increase -->
-    
+
     <!-- One click button -->
     <button id="clickButton">click me</button>
     <!-- Double click button, when you double click the button, then it will work -->
     <button id="dblclickButton">Double click</button>
     <p id="message"></p>
-    
+
     <button class="single-click" onclick="console.log('Button was clicked single time.')">single click!</button>
     <button class="double-click" ondblclick="console.log('Button was clicked double times.')">double click!</button>
-    
+
     <!-- Select all <li> elements and print their text using a loop. -->
     <ul id="my-list">
         <li>Apple</li>
@@ -89,6 +92,27 @@
         <li>apple</li>
         <li>apple</li>
     </ul>
+
+    <div class="div-box" onmouseover="console.log('This is a div box')">I'm a div box</div>
+    <button id="event">Event Button</button>
+
+    <!-- Qs. Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again -->
+    <button class="mode">change mode</button>
+
+    <!--  7. Change Image on Click
+    HTML:
+    <img id="img" src="image1.jpg" width="200">
+    <button>Change Image</button> -->
+    <div align="center">
+        <img id="img" src="image1.jpg" width="800">
+        <button id="imgBTN">Change Image</button>
+    </div>
+
+    
+    <input type="text" id="item">
+    <button>Add</button>
+    <ul id="list"></ul>
+
     <script src="Events.js"></script>
 </body>
 
