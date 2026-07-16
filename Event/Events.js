@@ -1,3 +1,5 @@
+// Event Listener
+
 // Practice Questions of DOM Manipulation 
 // 1. Change Text on Button Click 
 // <p id="text">Hello World</p>
@@ -20,7 +22,8 @@ btn.addEventListener("click", () => {
 // 2. Change Background Color 
 let changeColor = document.querySelector(".change_color");
 changeColor.addEventListener("click", () => {
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
 });
 
 // 3. Show Input Value 
@@ -86,6 +89,28 @@ ondlc.addEventListener('dblclick', () => {
     document.querySelector("#message").textContent = "Double clicked"
 });
 
+// 7. Change Image on Click
+// HTML:
+// <img id="img" src="image1.jpg" width="200">
+// <button>Change Image</button>
+// Task:
+// When the Button click then image source should be change.
+let changedSRC = document.querySelector("#imgBTN");
+let SRC = document.querySelector("#img");
+changedSRC.addEventListener("click", ()=> {
+    SRC.setAttribute("src", "image2.jpg");
+});
+
+
+// 8. Add Item to List
+// HTML:
+// <input type="text" id="item">
+// <button>Add</button>
+// <ul id="list"></ul>
+
+// Task:
+// Input mein jo text hai usko new <li> bana kar list mein add karo.
+
 
 // Select all <li> elements and print their text using a loop.
 let ul = document.querySelectorAll("#my-list li");
@@ -128,8 +153,8 @@ ReBtn.addEventListener("click", () => {
 });
 
 let toggle = document.querySelector(".toogle");
-toggle.classList.toggle("dark");
-toggle.classList.toggle("toogle");
+toggle.classList.toggle("ToggleHasBeenAdded");
+toggle.classList.toggle("toogle"); // This one wil remove
 
 // Add a highlight class to every even item in a list. 
 let ull = document.querySelectorAll(".ull li:nth-child(2n)");
@@ -137,3 +162,50 @@ ull.forEach(element => {
     element.classList.add("highlight")
 });
 
+let hover = document.querySelector(".div-box");
+// hover.addEventListener('onmouseover', ()=> {
+//     console.log('This is a div box')
+// })
+hover.onmouseover = ()=> {
+    console.log("This Text is inside div box"); // If we handle our event as inline event and also js file. So the priority should be given to js file not inline event.
+}; 
+// If you again write a code on this div so the first code will overwrite then, the last code will appear.
+hover.onmouseover = ()=> {
+    console.log("I'm a div"); // now the first one overwrite, This one will print on console.
+}; 
+
+// Event Objects
+const event = document.querySelector('#event')
+event.onclick = (event)=> {
+    console.log(event)
+    console.log(event.type)
+    console.log(event.target)
+    console.log(event.clientX)
+    console.log(event.clientX, event.clientY)
+}
+
+hover.onmouseover = (event)=> {
+    console.log(event)
+    console.log(event.type)
+    console.log(event.target)
+    console.log(event.clientX)
+    console.log(event.clientX, event.clientY)
+}
+
+const mode = document.querySelector(".mode");
+let body = document.querySelector("body")
+let currentMode = "light"
+mode.addEventListener("click", ()=> {
+    if (currentMode === "light") {
+        currentMode = "dark"
+        // document.body.style.backgroundColor = "black"
+        body.classList.add("dark")
+        body.classList.remove("light")
+    } else {
+        currentMode = "light"
+        // document.body.style.backgroundColor = "white"
+        body.classList.add("light")
+        body.classList.remove("dark")
+    }
+});
+// home when mouse over on something then it should happens something in the document, anything you want 
