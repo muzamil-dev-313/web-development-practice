@@ -230,4 +230,21 @@ hover.onmouseover = (event) => {
     console.log(event.clientX, event.clientY)
 }
 
+const mode = document.querySelector(".mode");
+let body = document.querySelector("body")
+let currentMode = "light"
+mode.addEventListener("click", () => {
+    if (currentMode === "light") {
+        currentMode = "dark"
+        // document.body.style.backgroundColor = "black"
+        body.classList.add("dark")
+        body.classList.remove("light")
+    } else {
+        currentMode = "light"
+        // document.body.style.backgroundColor = "white"
+        body.classList.add("light")
+        body.classList.remove("dark")
+    }
+});
+
 // home when mouse over on something then it should happens something in the document, anything you want 
