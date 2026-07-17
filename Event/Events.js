@@ -97,7 +97,7 @@ ondlc.addEventListener('dblclick', () => {
 // When the Button click then image source should be change.
 let changedSRC = document.querySelector("#imgBTN");
 let SRC = document.querySelector("#img");
-changedSRC.addEventListener("click", ()=> {
+changedSRC.addEventListener("click", () => {
     SRC.setAttribute("src", "image2.jpg");
 });
 
@@ -110,7 +110,45 @@ changedSRC.addEventListener("click", ()=> {
 
 // Task:
 // Input mein jo text hai usko new <li> bana kar list mein add karo.
+const inPut = document.querySelector("#item");
+const addBtn = document.querySelector("#addBtn");
+const list = document.querySelector("#list");
 
+// addBtn.addEventListener("click", ()=> {
+//     const lies = document.createElement("li");
+//     const trimValue = inPut.value.trim();
+
+//     if(trimValue === "") {
+//         lies.textContent = "Sorry, please write something here!"
+//         list.appendChild(lies)
+//     } else {
+//         lies.textContent = inPut.value
+//         list.appendChild(lies)
+//         inPut.value = ""
+//     };
+//     // console.log("Character count:", inPut.value.length); 
+// });
+
+function handleItems() {
+    const lies = document.createElement("li");
+    const trimValue = inPut.value.trim();
+
+    if (trimValue === "") {
+        lies.textContent = "Sorry, please write something here!";
+        list.appendChild(lies);
+    } else {
+        lies.textContent = trimValue
+        list.appendChild(lies)
+        inPut.value = ""
+    };
+};
+addBtn.addEventListener("click", handleItems);
+
+inPut.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        handleItems();
+    };
+});
 
 // Select all <li> elements and print their text using a loop.
 let ul = document.querySelectorAll("#my-list li");
@@ -166,17 +204,17 @@ let hover = document.querySelector(".div-box");
 // hover.addEventListener('onmouseover', ()=> {
 //     console.log('This is a div box')
 // })
-hover.onmouseover = ()=> {
+hover.onmouseover = () => {
     console.log("This Text is inside div box"); // If we handle our event as inline event and also js file. So the priority should be given to js file not inline event.
-}; 
+};
 // If you again write a code on this div so the first code will overwrite then, the last code will appear.
-hover.onmouseover = ()=> {
+hover.onmouseover = () => {
     console.log("I'm a div"); // now the first one overwrite, This one will print on console.
-}; 
+};
 
 // Event Objects
 const event = document.querySelector('#event')
-event.onclick = (event)=> {
+event.onclick = (event) => {
     console.log(event)
     console.log(event.type)
     console.log(event.target)
@@ -184,7 +222,7 @@ event.onclick = (event)=> {
     console.log(event.clientX, event.clientY)
 }
 
-hover.onmouseover = (event)=> {
+hover.onmouseover = (event) => {
     console.log(event)
     console.log(event.type)
     console.log(event.target)
@@ -192,20 +230,4 @@ hover.onmouseover = (event)=> {
     console.log(event.clientX, event.clientY)
 }
 
-const mode = document.querySelector(".mode");
-let body = document.querySelector("body")
-let currentMode = "light"
-mode.addEventListener("click", ()=> {
-    if (currentMode === "light") {
-        currentMode = "dark"
-        // document.body.style.backgroundColor = "black"
-        body.classList.add("dark")
-        body.classList.remove("light")
-    } else {
-        currentMode = "light"
-        // document.body.style.backgroundColor = "white"
-        body.classList.add("light")
-        body.classList.remove("dark")
-    }
-});
 // home when mouse over on something then it should happens something in the document, anything you want 
