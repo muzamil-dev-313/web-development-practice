@@ -1,4 +1,52 @@
 // Event Listener
+// syntax 
+// addEventListener
+// first: Select node element name or we can say select variable that you will name for that element name. for example h1 for heading 1 we can also name for h1 heading the variable its upto you
+
+// second: we will then select or add the listener event and with adding event name (event name maybe click, double click, key down, or mouseover)
+
+// third:  We will add a function because we need to run our eventListener 
+// element.addEventListener("event name ("click")", function(){
+// })
+// h1.addEventListener('click', function(){
+// }) 
+// removeEventListener 
+// In remove event listener we first create a function, after creating a function then we will add listener give it an action and call our function so our event will work(what will happen if we write removeEventListener and event action and our function that we define alread in this call our event will remove it won't work)
+// Create a function give it a name
+
+let h1 = document.querySelector("h1");
+h1.addEventListener('click', function () {
+    h1.style.color = "red"
+});
+
+let p = document.querySelector(".colorChanging");
+p.addEventListener("click", function () {
+    p.style.color = "green";
+    p.style.backgroundColor = "yellow"
+    p.style.fontSize = "20px"
+});
+p.addEventListener("dblclick", function () {
+    p.style.color = "black";
+    p.style.fontSize = "25px"
+})
+
+function element() {
+    p.style.display = "none"
+}
+p.addEventListener("dblclick", element); // Do the display of paragraph none 
+p.removeEventListener("dblclick", element); // Remove the listener. When we double click because we said to our listener make our action double click.
+
+let i = document.querySelector(".inp");
+// i.addEventListener("input", function(data){
+//     console.log("typed")
+//     // console.log(data)
+// });
+i.addEventListener("input", function (evt) {
+    if (evt.data !== null) { // if you click backspace key the backspace, data is null so we use it variable name and .data !== null then our console will not show us null when we use backspace.
+        console.log(evt.data)
+    }
+    // console.log(evt.data)
+})
 
 // Practice Questions of DOM Manipulation 
 // 1. Change Text on Button Click 
@@ -247,4 +295,17 @@ mode.addEventListener("click", () => {
     }
 });
 
+
+let selection = document.querySelector("#selection")
+let selHeading = document.querySelector(".selHeading")
+selection.addEventListener("change", function(details){
+    console.log(details);
+    console.log(details.target.value);
+    // selHeading.textContent = "Device Selected"
+    selHeading.textContent = `${details.target.value} Device Selected`
+});
+
+
+
 // home when mouse over on something then it should happens something in the document, anything you want 
+
